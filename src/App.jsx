@@ -26,8 +26,13 @@ class App extends Component {
         return (
             <>
                 <Navbar />
-                <TodoAddForm onAdd={this.onAdd} />
-                <Todos todos={this.state.todos} onDelete={this.handleDelete} />
+                <section className="container">
+                    <TodoAddForm onAdd={this.onAdd} />
+                    <Todos
+                        todos={this.state.todos}
+                        onDelete={this.handleDelete}
+                    />
+                </section>
             </>
         );
     }

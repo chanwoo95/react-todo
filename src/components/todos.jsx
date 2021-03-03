@@ -4,7 +4,7 @@ import Todo from './todo';
 class Todos extends Component {
     render() {
         return (
-            <ul>
+            <ul className="todo-list">
                 {this.props.todos.map((item) => (
                     <Todo
                         key={item.id}
