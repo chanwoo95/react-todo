@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Todo extends Component {
     handleDelete = () => {
         this.props.onDelete(this.props.todo);
-        console.log(this.props.onDelete, this.props.todo);
     };
     render() {
         const { name } = this.props.todo;
