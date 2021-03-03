@@ -14,13 +14,19 @@ class App extends Component {
     };
 
     handleDelete = (todo) => {
-        this.state.todos.filter((item) => todo.id !== item.id);
+        const todos = this.state.todos.filter((item) => todo.id !== item.id);
+        this.setState({ todos });
+    };
+
+    onAdd = (name) => {
+        const todos = [...this.state.todos, { id: Date.now(), name }];
+        this.setState({ todos });
     };
     render() {
         return (
             <>
                 <Navbar />
-                <TodoAddForm />
+                <TodoAddForm onAdd={this.onAdd} />
                 <Todos todos={this.state.todos} onDelete={this.handleDelete} />
             </>
         );
