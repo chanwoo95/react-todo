@@ -6,11 +6,7 @@ import TodoAddForm from './components/todoAddForm';
 
 class App extends Component {
     state = {
-        todos: [
-            { id: 0, name: 'coding' },
-            { id: 1, name: 'running' },
-            { id: 2, name: 'eating' },
-        ],
+        todos: [],
     };
 
     handleDelete = (todo) => {
@@ -32,6 +28,7 @@ class App extends Component {
                         todos={this.state.todos}
                         onDelete={this.handleDelete}
                     />
+                    <span className="totalCount">total</span>
                 </section>
             </>
         );

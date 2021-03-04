@@ -24,7 +24,7 @@ class TodoAddForm extends Component {
                         className="todo-input"
                         placeholder="Add new Item.."
                     />
-                    <button className="todo-button">Add</button>
+                    <button className="todo-add">Add</button>
                 </form>
             </>
         );

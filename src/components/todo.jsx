@@ -10,7 +10,7 @@ class Todo extends Component {
             <li className="todo">
                 <span className="todo-name">{name}</span>
                 <button className="todo-delete" onClick={this.handleDelete}>
-                    x
+                    <i class="fas fa-trash"></i>
                 </button>
             </li>
         );
