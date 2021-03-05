@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
 class NowTime extends Component {
-    // getDate = () => {
-    //     const date = new Date();
-    //     const year = date.getFullYear();
-    //     const hours = date.getHours();
-    //     const month = date.getMonth();
+    getDate = () => {
+        const date = new Date();
+        const year = date.getFullYear();
+        const hours = date.getHours();
+        const month = date.getMonth();
 
-    //     const nowDate = `${year} ${month}`;
-    // };
+        return;
+    };
     render() {
-        return <h2>{}</h2>;
+        return <h2>{this.getDate}</h2>;
     }
 }
 

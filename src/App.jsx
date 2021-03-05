@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/navbar';
-import './App.css';
+import './app.css';
 import Todos from './components/todos';
 import TodoAddForm from './components/todoAddForm';
 
@@ -18,6 +18,7 @@ class App extends Component {
         const todos = [...this.state.todos, { id: Date.now(), name }];
         this.setState({ todos });
     };
+
     render() {
         return (
             <>
@@ -28,7 +29,10 @@ class App extends Component {
                         todos={this.state.todos}
                         onDelete={this.handleDelete}
                     />
-                    <span className="totalCount">total</span>
+                    <span className="total-count">
+                        Total Count:
+                        {this.state.todos.filter((item) => item.id > 0).length}
+                    </span>
                 </section>
             </>
         );
