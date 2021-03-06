@@ -29,11 +29,14 @@ class App extends Component {
                         todos={this.state.todos}
                         onDelete={this.handleDelete}
                     />
+                </section>
+                <div className="count-container">
+                    <button className="reset-button">Reset All</button>
                     <span className="total-count">
                         Total Count:
                         {this.state.todos.filter((item) => item.id > 0).length}
                     </span>
-                </section>
+                </div>
             </>
         );
     }

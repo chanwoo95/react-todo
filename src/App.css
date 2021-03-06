@@ -27,6 +27,7 @@ button {
 
 .navbar-title {
     font-size: 32px;
+    font-weight: 300;
     color: white;
 }
 
@@ -108,7 +109,7 @@ button {
 
 .todo-delete {
     margin-right: 10px;
-    color: #bd3f32;
+    color: red;
     transition: all 0.2s;
 }
 
@@ -117,10 +118,20 @@ button {
     opacity: 0.8;
 }
 
-.total-count {
+/* .total-count {
     position: absolute;
     color: #ffffff;
     right: 0;
     margin-top: 10px;
     margin-right: 10px;
+} */
+
+.nowtime {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.count-container {
+    display: flex;
+    justify-content: space-around;
 }
