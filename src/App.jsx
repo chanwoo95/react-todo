@@ -19,6 +19,13 @@ class App extends Component {
         this.setState({ todos });
     };
 
+    handleReset = () => {
+        const todos = this.state.todos.filter((item) => {
+            if (item.id < 0) return item;
+        });
+        this.setState({ todos });
+    };
+
     render() {
         return (
             <>
@@ -31,7 +38,9 @@ class App extends Component {
                     />
                 </section>
                 <div className="count-container">
-                    <button className="reset-button">Reset All</button>
+                    <button className="reset-button" onClick={this.handleReset}>
+                        Reset All
+                    </button>
                     <span className="total-count">
                         Total Count:
                         {this.state.todos.filter((item) => item.id > 0).length}
